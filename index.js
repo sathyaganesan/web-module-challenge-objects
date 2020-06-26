@@ -39,6 +39,18 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+function burgerDiscount(customer) {
+  let discount = null;
+if (customer === "student" || customer === "teacher"){
+  discount = burger.price -(burger.price * (25 / 100));
+} else {
+  discount = burger.price -(burger.price * (10 / 100));
+}
+return console.log("Discounted Rate is: $", discount,);
+}
+
+burgerDiscount("public");
+
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -55,7 +67,6 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
- 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
