@@ -7,14 +7,29 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, cost, category){
-    /* Code here */
-}
+  let menuItems = {};
+  menuItems.name = name;
+  menuItems.price = cost;
+  menuItems.category = category;
+  return menuItems;
+}    
+  let steamCake = createMenuItem("idly", 10, "bfast");
+  console.log("SteamCake = ",steamCake)
+
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
+let panCake =  createMenuItem("dosa", 12, "Breakfast");
+console.log("panCake =", panCake);
 
+let vegThali = createMenuItem("Rice and Vggies", 15, "Lunch");
+console.log("vegThali =", vegThali);
 
-/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
+let riceNoodles = createMenuItem("Rice Noodles and Coconut Milk", 11, "Snack");
+console.log("Rice Noodles =", riceNoodles);
+
+/* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object 
+that automatically calculates price given a string as a parameter. 
 
 Your method should accept: 
 
@@ -40,6 +55,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 /* Task 3: Console.log just Julius' feedback */
 
+ 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
