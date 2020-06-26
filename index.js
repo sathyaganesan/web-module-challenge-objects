@@ -6,6 +6,7 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
+console.log("Task 1a Answer:");
 function createMenuItem(name, cost, category){
   let menuItems = {};
   menuItems.name = name;
@@ -19,6 +20,7 @@ function createMenuItem(name, cost, category){
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 
+console.log("Task 1b Answer:");
 let panCake =  createMenuItem("dosa", 12, "Breakfast");
 console.log("panCake =", panCake);
 
@@ -39,6 +41,7 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+console.log("Task 2 Answer:");
 function burgerDiscount(customer) {
   let discount = null;
 if (customer === "student" || customer === "teacher"){
@@ -66,12 +69,41 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
+console.log("Task 3 Answer:");
+function feedbackWithName(studentName){
+  for (let i = 0; i < reviews.length; i++) {
+    if(reviews[i].name == studentName) {
+          console.log(reviews[i]);
+    }
+  }
+}
+  feedbackWithName("Lauren"); 
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
+console.log("Task 4 Answer:");
+function restaurantReview() {
+  let review = {};
+  review.name = "Chennai Express";  
+  review.rating = 4;
+  review.feedback = "Yummy yummy tummy";
+  console.log(review);
+}
+  restaurantReview();
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, 
+great for getting work done on weekdays"*/
+
+console.log("Task 5 Answer:");
+function newFeedback(nameOfStudent, feedBack) {
+  for (let i = 0; i < reviews.length; i++) {
+    if(reviews[i].name === nameOfStudent) {
+      console.log(reviews[i].feedback = feedBack);
+    }
+  }
+}
+  newFeedback("Reyna", "this place is chill with really cool people, great for getting work done on weekdays");  
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
