@@ -221,8 +221,12 @@ The returned object should have the following characteristics:
          (2) returns the updated value of the `odometer`.
 */
 
-
-function carMaker(/* code here */) {
-    /* code here */
-    
-}
+console.log("Stretch 3 Result");
+function carMaker(distance) {
+  let readings = {};
+  readings.odometer = distance;
+  readings.drive = (distance- 15000);
+    return readings;
+  }
+    let driveDistance = carMaker(15500);
+    console.log("Drive Distance =", driveDistance);
